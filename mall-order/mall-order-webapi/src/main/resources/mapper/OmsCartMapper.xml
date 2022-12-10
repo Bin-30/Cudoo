@@ -17,8 +17,40 @@
         <result column="data" property="data"/>
     </resultMap>
 
+    <select id="selectExistsCart" resultMap="BaseResultMap">
+        select id, user_id, sku_id, title, main_picture, price, quantity, gmt_create, gmt_modified
+               from oms_cart
+        where user_id=#{userId} and sku_id=#{skuId}
+    </select>
 
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into oms_cart(user_id, sku_id, title, main_picture, price, quantity)
+            values (#{userId},#{skuId},#{title},#{mainPicture},#{price}, #{quantity})
+    </insert>
 
+    <update id="updateQuantityById">
+        update oms_cart set quantity=#{quantity} where id=#{id}
+    </update>
+
+    <select id="selectCartByUserId" resultType="cn.tedu.mall.pojo.order.vo.CartStandardVO">
+        select id, user_id, sku_id, title, main_picture, price, quantity, gmt_create, gmt_modified
+        from oms_cart where user_id=#{userId}
+    </select>
+
+    <delete id="deleteCartByIds">
+        delete from oms_cart where id in
+            <foreach collection="array" item="id" separator="," open="(" close=")">
+                #{id}
+            </foreach>
+    </delete>
+
+    <delete id="deleteCartByUserIds">
+        delete from oms_cart where user_id=#{userId}
+    </delete>
+
+    <delete id="deleteCartByUserIdAndSkuId">
+        delete from oms_cart where user_id=#{userId} and sku_id=#{skuId}
+    </delete>
 </mapper>
 
 

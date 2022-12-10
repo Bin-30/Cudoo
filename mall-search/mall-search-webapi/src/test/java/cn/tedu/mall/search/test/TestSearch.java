@@ -24,14 +24,13 @@ public class TestSearch {
     @Autowired
     private SpuForElasticRepository elasticRepository;
 
-   /* @Test
+    @Test
     void getAll(){
         Iterable<SpuForElastic> es=elasticRepository.findAll();
         es.forEach(e-> System.out.println(e));
-
     }
 
-    @Test
+   /** @Test
     void getSpu(){
         Iterable<SpuForElastic> it=elasticRepository
                         .querySpuForElasticsByTitleMatches("手机");
@@ -43,8 +42,6 @@ public class TestSearch {
         Iterable<SpuForElastic> it=elasticRepository.querySearch("手机");
         it.forEach(e-> System.out.println(e));
     }
-
-*/
-
+    */
 
 }

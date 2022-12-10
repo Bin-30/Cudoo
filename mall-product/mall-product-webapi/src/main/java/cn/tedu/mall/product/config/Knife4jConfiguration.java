@@ -35,11 +35,11 @@ public class Knife4jConfiguration {
     /**
      * 标题
      */
-    private String title = "酷鲨商城在线API文档--商品管理";
+    private String title = "库动商城在线API文档--商品管理";
     /**
      * 简介
      */
-    private String description = "酷鲨商城在线API文档--商品管理";
+    private String description = "库动商城在线API文档--商品管理";
     /**
      * 服务条款URL
      */
@@ -47,7 +47,7 @@ public class Knife4jConfiguration {
     /**
      * 联系人
      */
-    private String contactName = "Java教学研发部";
+    private String contactName = "Java部";
     /**
      * 联系网址
      */

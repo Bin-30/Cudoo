@@ -13,6 +13,23 @@
     </resultMap>
     <!--  查询秒杀spu的sql片段  -->
 
+    <select id="selectSeckillSpu" resultMap="BaseResultMap">
+        select id, spu_id, list_price, start_time, end_time, gmt_create, gmt_modified
+            from seckill_spu
+    </select>
+
+    <select id="findSeckillSpuByTime" resultMap="BaseResultMap">
+        select id, spu_id, list_price, start_time, end_time, gmt_create, gmt_modified from seckill_spu where #{time} between start_time and end_time
+    </select>
+
+    <select id="findSeckillSpuById" resultMap="BaseResultMap">
+        select id, spu_id, list_price, start_time, end_time, gmt_create, gmt_modified
+            from seckill_spu where spu_id=#{spuId}
+    </select>
+
+    <select id="findSeckillSpuId" resultType="long">
+        select spu_id from seckill_spu
+    </select>
 
 
 </mapper>

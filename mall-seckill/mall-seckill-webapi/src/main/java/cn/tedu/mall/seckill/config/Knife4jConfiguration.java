@@ -40,8 +40,8 @@ public class Knife4jConfiguration {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Cool Shark Mall SSO秒杀功能API")
-                .description("Cool Shark Mall SSO秒杀功能API")
+                .title("Cudo Mall SSO秒杀功能API")
+                .description("Cudo Mall SSO秒杀功能API")
                 .termsOfServiceUrl("http://www.tedu.cn")
                 .contact(new Contact("jsd@tedu.cn", "http://jsd.tedu.cn", "jsd@tedu.cn"))
                 .version("1.0.0")
